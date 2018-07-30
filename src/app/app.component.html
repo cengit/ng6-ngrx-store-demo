@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<button (click)="showJavaArticles()">Java Articles</button>
+<button (click)="showAngularArticles()">Angular Articles</button>
+<button (click)="showFavoriteArticles()">Favorite Articles</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="addArticle()">Add Articles</button>
+<ul>
+   <li *ngFor="let article of articles | async">
+        {{article.id}} - {{article.title}} - {{article.category}}   
+   </li>
+</ul> 
